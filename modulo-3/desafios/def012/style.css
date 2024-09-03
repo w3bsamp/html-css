@@ -41,8 +41,7 @@ section.text{
 }
 
 section.imagem{
-
-    background-position: center center;
+    background-position: right center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
