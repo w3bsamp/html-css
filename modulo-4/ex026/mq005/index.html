@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="estilos/style.css">
     <title>Menu</title>
 </head>
-<body>
+<body onresize="mudoutamanho()">
     <header>
         <h1>Meu site</h1>
-        <menu>
+        <i id="burguer" class="bi bi-list" onclick="abrir()"></i>
+        <menu id="itens">
             <ul>
                 <li><a href="#">opçao</a></li>
                 <li><a href="#">opçao</a></li>
@@ -23,7 +25,25 @@
         <article>
             <h2>Lorem</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates ipsum soluta quam fugiat nulla quas totam molestiae voluptatibus, illo eligendi ullam repellendus dignissimos magni quia nam corrupti. Quia ab hic sunt accusamus placeat quasi, officiis, quis eum animi quod ad quibusdam qui totam itaque nesciunt, omnis aspernatur ipsum debitis ex dignissimos sapiente id quaerat nisi ullam. Unde qui voluptates neque quas tenetur ab sint nobis aliquid, repellendus, officiis fugiat amet mollitia debitis corrupti saepe laboriosam delectus vero itaque nesciunt excepturi, labore accusantium? Cupiditate modi expedita quam ducimus velit quo adipisci officiis inventore sequi. Eligendi ipsa, amet aperiam repudiandae vero esse!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates ipsum soluta quam fugiat nulla quas totam molestiae voluptatibus, illo eligendi ullam repellendus dignissimos magni quia nam corrupti. Quia ab hic sunt accusamus placeat quasi, officiis, quis eum animi quod ad quibusdam qui totam itaque nesciunt, omnis aspernatur ipsum debitis ex dignissimos sapiente id quaerat nisi ullam. Unde qui voluptates neque quas tenetur ab sint nobis aliquid, repellendus, officiis fugiat amet mollitia debitis corrupti saepe laboriosam delectus vero itaque nesciunt excepturi, labore accusantium? Cupiditate modi expedita quam ducimus velit quo adipisci officiis inventore sequi. Eligendi ipsa, amet aperiam repudiandae vero esse!</p>
         </article>
     </main>
+    <script>
+        function abrir() {
+            let item = document.getElementById('itens')
+            if (item.style.display == 'block'){
+                item.style.display = 'none'
+            } else {
+                item.style.display = 'block'
+            }
+        }
+        function mudoutamanho(){
+            if (window.innerWidth >= 768){
+                item.style.display = 'block'
+            } else{
+                item.style.display = 'none'
+            }
+        }
+    </script>
 </body>
 </html>
